@@ -1,15 +1,14 @@
-//login con alert
-const password = document.getElementById("password");
-const login = document.getElementById("email");
-
-const go = () => { 
-  if (document.form.password.value === true &&  document.form.login.value === true){ 
-    window.open('menu.html') //abre página index si se pone correcto
-    } 
-    else{ 
-      alert("Porfavor ingrese, correo electrónico y contraseña correctos."); 
-    } 
-  }
+//login
+function enviar() { 
+  let password = document.getElementById("password");
+  let login = document.getElementById("email");
+  if (document.form.password.value === true && document.form.login.value === true){ 
+  window.open('menu.html') //abre página index si se pone correcto
+  } 
+  else{ 
+    alert("Porfavor ingrese, correo electrónico y contraseña correctos."); 
+  } 
+}
 
 //Perfil
 
