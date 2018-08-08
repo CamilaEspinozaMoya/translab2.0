@@ -1,6 +1,6 @@
 function login(){
-  const emailValue = email.value;
-  const passwordValue = password.value;
+  const emailValue = email1.value;
+  const passwordValue = password1.value;
   firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
       .then(()=>{
           console.log("Usuario con login exitoso");
