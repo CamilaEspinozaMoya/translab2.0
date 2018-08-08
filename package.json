@@ -27,5 +27,7 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {}
+  "dependencies": {
+    "firebaseui": "^3.2.0"
+  }
 }

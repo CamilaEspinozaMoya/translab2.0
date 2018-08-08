@@ -5,10 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>TRANS-LAB</title>
   <!--link de bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
+  <!-- firestore -->
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
   <link rel="stylesheet" href="src/css/style.css">
 </head>
 
@@ -26,11 +29,11 @@
           <form class="login">
                 <div class="form-group">
                   <label for="exampleInputEmail1"></label>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Correo electrónico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Correo electrónico">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1"></label>
-                  <input type="password" maxlength="8" class="form-control" pattern="[0-9]{8}" id="password" placeholder="Contraseña">
+                  <input type="password" maxlength="8" class="form-control" id="password" placeholder="Contraseña">
                 </div>
                 <button type="submit" class="btn btn-primary iniciar" onclick="enviar()" >INICIAR SESIÓN</button>
           </form>
@@ -49,6 +52,19 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyC9AQ_gbQy-OvAXD9EwBr03cJW4m0aADeY",
+      authDomain: "translab-38b46.firebaseapp.com",
+      databaseURL: "https://translab-38b46.firebaseio.com",
+      projectId: "translab-38b46",
+      storageBucket: "translab-38b46.appspot.com",
+      messagingSenderId: "242701727798"
+      };
+      firebase.initializeApp(config);
+  </script>
   <script type="text/javascript" src="src/js/main.js"></script>
 </body>
 
