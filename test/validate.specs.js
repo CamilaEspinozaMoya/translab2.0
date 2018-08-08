@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
 
 global.window = global;
-require('../src/js/validate'); //solo enlaza el archivo
+require('../public/src/js/validate'); //solo enlaza el archivo
 
 describe('validar emails', ()=>{//Describe que habra dentro 
   describe('Deberia verificar si existe @', ()=>{
