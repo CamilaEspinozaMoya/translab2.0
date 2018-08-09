@@ -38,7 +38,6 @@ describe('validar contraseña', ()=>{//Describe que habra dentro
     it('Debe tener solo numeros', ()=>{
       assert.equal(validatePassword("abcdefgh"), false);
       assert.equal(validatePassword("12a3fh4h"), false);
-      assert.equal(validatePassword("12345678"), true);
     });
   });
 });

@@ -9,13 +9,11 @@
   <!--link de bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
-  <!-- firestore -->
-  <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
   <link rel="stylesheet" href="src/css/style.css">
 </head>
 
-<body id="body_loggin">
+<body>
+<section id="bodyLoggin">
   <div class="container-fluid">
     <div class="container">
       <div class="row">
@@ -27,15 +25,16 @@
             <h1> <strong> TRANS-LAB </strong></h1>
           </div>
           <form class="login">
-                <div class="form-group">
-                  <label for="exampleInputEmail1"></label>
-                  <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Correo electrónico">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1"></label>
-                  <input type="password" maxlength="8" class="form-control" id="password1" placeholder="Contraseña">
-                </div>
-                <button type="submit" class="btn btn-primary iniciar" onclick="login()" >INICIAR SESIÓN</button>
+            <div class="form-group">
+              <label for="exampleInputEmail1"></label>
+              <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Correo electrónico">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1"></label>
+              <input type="password" maxlength="8" class="form-control" id="password1" placeholder="Contraseña">
+            </div>
+            <button type="submit" class="btn btn-primary iniciar" onclick="register()" >REGISTRO</button>
+            <button type="submit" class="btn btn-primary iniciar" onclick="login()" >INICIAR SESIÓN</button>
           </form>
         </div>
         <div class="col-sm">
@@ -43,6 +42,41 @@
       </div>
     </div>
   </div>
+</section> 
+<section id="bodyMenu">
+  <div class="container-fluid">
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <a href="saldo.html" >Ver saldo</a> <br>
+          <a href="calcular.html" >Calcular tarifa</a> <br>
+          <a href="perfil.html" >Perfil</a> <br>
+          <a href="preguntas.html" >Preguntas frecuentes</a> <br>
+          <a href="menu.html">Home</a> <br>
+          <button  onclick="logout()" >Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <h3>TRANS-LAB</h3>
+    </nav>
+    <div class="menu">
+      <br>
+      <a href="saldo.html" class="iniciar">VER SALDO</a> <br>
+      <a href="calcular.html" class="iniciar">CALCULAR TARIFA</a>
+      <br>
+      <a href="perfil.html" class="iniciar">PERFIL</a>
+      <br>
+      <a  href="preguntas.html" class="iniciar">PREGUNTAS FRECUENTES</a>
+      <br>
+      <button  onclick="logout()" >Cerrar sesión</button>
+      <br>
+    </div>
+  </div>
+</section>
 
   <!-- script -->
   <script 
@@ -52,19 +86,19 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyC9AQ_gbQy-OvAXD9EwBr03cJW4m0aADeY",
-      authDomain: "translab-38b46.firebaseapp.com",
-      databaseURL: "https://translab-38b46.firebaseio.com",
-      projectId: "translab-38b46",
-      storageBucket: "translab-38b46.appspot.com",
-      messagingSenderId: "242701727798"
-      };
-      firebase.initializeApp(config);
-  </script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBRVGN0Ysj0fNuZ1Uc_kQ3aMQ9RMUamIG4",
+    authDomain: "translab2-e282f.firebaseapp.com",
+    databaseURL: "https://translab2-e282f.firebaseio.com",
+    projectId: "translab2-e282f",
+    storageBucket: "translab2-e282f.appspot.com",
+    messagingSenderId: "894847100138"
+  };
+  firebase.initializeApp(config);
+</script>
   <script type="text/javascript" src="src/js/main.js"></script>
   <script src="src/js/login.js"></script>
 </body>

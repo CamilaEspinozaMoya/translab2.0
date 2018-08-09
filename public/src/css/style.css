@@ -7,6 +7,10 @@
     color: #F6A800;
     text-align: center;
   }
+
+  #body_menu{
+    display: none;
+  }
   
   h3 {
     text-align: center;
