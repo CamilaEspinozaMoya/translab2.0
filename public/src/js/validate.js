@@ -31,9 +31,5 @@ window.validatePassword = function(password){
   if(password.length <= 0){
     return false;
   }
-  if(typeof password === 'string'){
-    return false;
-  }
   return true;
 };
-

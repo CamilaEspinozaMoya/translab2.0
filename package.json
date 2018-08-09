@@ -1,8 +1,11 @@
 {
   "name": "translab2.0",
   "version": "0.0.1",
-  "description": "Ejercicio de translab 2.0",
+  "description": "translab mejorado",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "mocha"
   },
@@ -14,7 +17,7 @@
     "test",
     "development"
   ],
-  "author": "Camila Espinoza Moya",
+  "author": "Camila Espinoza",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/CamilaEspinozaMoya/translab2.0/issues"
@@ -23,11 +26,5 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "mocha": "^5.2.0"
-  },
-  "directories": {
-    "test": "test"
-  },
-  "dependencies": {
-    "firebaseui": "^3.2.0"
   }
 }

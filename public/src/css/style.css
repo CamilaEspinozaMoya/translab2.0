@@ -1,17 +1,18 @@
 @media only screen and (max-width: 600px) {
-  #body_loggin {
+  #paginaRegistro {
     background: #3E3F41;
   }
   
+  #menuPrincipal{
+    display: none;
+    background-color: #DDDEE0;
+  }
+
   h1 {
     color: #F6A800;
     text-align: center;
   }
 
-  #body_menu{
-    display: none;
-  }
-  
   h3 {
     text-align: center;
     color: white;
@@ -39,10 +40,6 @@
     display: block;
   }
   
-  #body_menu {
-    background-color: #DDDEE0;
-  }
-  
   .user {
     border-radius: 200px 200px 200px 200px;
     -moz-border-radius: 200px 200px 200px 200px;
@@ -56,3 +53,4 @@
   }
   
   }
+  
