@@ -19,6 +19,7 @@ function register(){
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(()=>{
     console.log("Usuario registrado");
+    alert("Registro exitoso");
   })
   .catch((error)=>{
     console.log("Error de firebase"+error.code);
