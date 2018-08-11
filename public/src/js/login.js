@@ -1,4 +1,3 @@
-/*
 window.onload = () =>{
   firebase.auth().onAuthStateChanged((user)=>{
     if(user){
@@ -13,12 +12,11 @@ window.onload = () =>{
     }
   });
 };
-*/
 
 function register(){
   let email = document.getElementById('email1').value;
   let password = document.getElementById('password1').value;
-  console.log(email); 
+  console.log(email);
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(()=>{
     console.log("Usuario registrado");
@@ -55,3 +53,25 @@ function logout(){
     console.log("Error de firebase Mensaje"+error.message); //error.message nos mostrará el mensaje de firebase del mismo error
 });
 }
+
+
+/*
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    $('correo').val(user.email);
+    // ...
+  } else {
+  }
+ });
+*/
+/*
+var user = firebase.auth().currentUser;
+const email = document.getElementById('email1').value;
+let correo = document.getElementById('correo');
+if (user != null) {
+  user.providerData.forEach(function (profile) {
+    console.log("  Email: " + profile.email);
+
+  });
+}
+*/

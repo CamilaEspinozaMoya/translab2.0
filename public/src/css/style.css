@@ -15,10 +15,14 @@
 
   h3 {
     text-align: center;
-    color: white;
+    color: #FFFFFF;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+  }
+
+  i {
+    color: #F6A800;
+    display: inline;
   }
   
   .iniciar {
@@ -27,6 +31,15 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
+  }
+
+  .iniciar2 {
+    background-color: #F6A800;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    color: #FFFFFF;
   }
   
   #logo_login {
@@ -50,7 +63,9 @@
   
   .usuario {
     background-color: #F6A800;
+    width: 100%;
+    height: 30vh;
   }
   
-  }
+}
   
