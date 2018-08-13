@@ -31,5 +31,8 @@ window.validatePassword = function(password){
   if(password.length <= 0){
     return false;
   }
+  if (password.typeof != 'number') {
+    return false;
+  }
   return true;
 };

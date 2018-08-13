@@ -1,6 +1,8 @@
 window.onload = () =>{
   firebase.auth().onAuthStateChanged((user)=>{
     if(user){
+      let emailUser = user.email;
+      correoUser.innerHTML = emailUser;
     //Si estamos logueados
     $('#paginaRegistro').hide();
     $('#menuPrincipal').show();
