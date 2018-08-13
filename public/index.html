@@ -45,7 +45,7 @@
           <i class="fas fa-user"></i>
           <a onclick="showPerfil()" >Perfil</a> <br>
           <i class="fas fa-question"></i>
-          <a onclick="showPreguntas()" >Preguntas frecuentes</a> <br>
+          <a onclick="showPregunta()" >Preguntas frecuentes</a> <br>
           <i class="fas fa-home"></i>
           <a onclick="showHome()" >Home</a> <br>
           <i class="fas fa-sign-out-alt"></i>
@@ -68,14 +68,58 @@
       <br>
       <a class="iniciar2" onclick="showPerfil()" >PERFIL</a>
       <br>
-      <a class="iniciar2" onclick="showPreguntas()" >PREGUNTAS FRECUENTES</a>
+      <a class="iniciar2" onclick="showPregunta()" >PREGUNTAS FRECUENTES</a>
       <br>
   </section>
   <section id="saldo">
-
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="input-group mb-3">
+        <select class="custom-select" id="inputGroupSelect01">
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="row">
+          <div class="col-12">
+            <button type="submit" class="iniciar2"  onclick="" id="btn"><i  aria-hidden="true"></i>VER SALDO</button>
+          </div>
+        </div>
   </section>
   <section id="calcular">
-
+      <div class="input-group mb-3">
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Tarifa</label>
+              </div>  
+          <select class="custom-select" id="inputGroupSelect01">
+              <option selected>Selecciona la tarifa</option>
+              <option value="$760">Horario Alto</option>
+              <option value="$680">Horario Medio</option>
+              <option value="$630">Horario Bajo</option>
+            </select>
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">Tarjeta</label>
+                </div>  
+            <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          <div class="row">
+              <div class="col-12">
+                <button type="submit" class="iniciar2"  onclick="" id="btn"><i  aria-hidden="true"></i>CALCULAR</button>
+              </div>
+            </div>
   </section>
   <section id="perfil">
     <div class="usuario">
@@ -97,50 +141,21 @@
           </div>
         </div>
         <div class="row">
-            <div class="col-12">
-                <div id="contenedorNumero"></div>
+          <div class="col-12">
+            <div id="contenedorNumero">
             </div>
           </div>
-        <!-- contenedor comentarios -->
-        <div class="row">
-          <div class="col-12" id="cont"></div>
         </div>
       </div>
+    </section>   
   </section>
-  <section id="preguntas">
+  <section id="pregunta">
     <div class="usuario">
       <h3>PREGUNTAS FRECUENTES</h3>
     </div>
-    <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-            <p>Los cuidados de tu tarjeta son simples. Sólo debes evitar exponerla al calor, doblarla o quebrarla. Te recomendamos tenerla en un tarjetero plástico para aumentar su vida útil.</p>
-          </div>
-        </div>
-      </div>
-    <nav class="navbar navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        Problemas y cuidados de tarjeta bip!
-    </nav>
-    <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-            <p>Si tu tarjeta no funciona y tiene daños no atribuibles al usuario, llévala a una Oficina de Servicio al Cliente donde será cambiada por una nueva, sólo si se comprueba la falla. Si la tarjeta dañada tiene saldo, será traspasado en cinco días hábiles.</p>
-          </div>
-        </div>
-      </div>
-    <nav class="navbar navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        ¿Dónde puedo cambiar mi tarjeta bip! portador en caso de falla?
-    </nav>
   </section>
-  <section id="home">
 
-  </section>
+  
   <!-- bootstrap -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

@@ -4,11 +4,21 @@ window.onload = () =>{
     //Si estamos logueados
     paginaRegistro.style.display = "none";
     menuPrincipal.style.display = "block";
+    menu.style.display = "block";
+    saldo.style.display = "none";
+    calcular.style.display = "none";
+    perfil.style.display = "none";
+    preguntas.style.display = "none";
     console.log("User > "+JSON.stringify(user));
     }else{
     //No estamos logueados
     paginaRegistro.style.display = "block";
     menuPrincipal.style.display = "none";
+    menu.style.display = "none";
+    saldo.style.display = "none";
+    calcular.style.display = "none";
+    perfil.style.display = "none";
+    preguntas.style.display = "none";
     }
   });
 };

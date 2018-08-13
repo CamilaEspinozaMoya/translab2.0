@@ -1,46 +1,51 @@
-function showHome() {
-  $('#menuPrincipal').show();
-  $('#menu').show();
-  $('#saldo').hide();
-  $('#calcular').hide();
-  $('#perfil').hide();
-  $('#preguntas').hide();
+function showHome(){
+  paginaRegistro.style.display = "none";
+  menuPrincipal.style.display = "block";
+  menu.style.display = "block";
+  saldo.style.display = "none";
+  calcular.style.display = "none";
+  perfil.style.display = "none";
+  preguntas.style.display = "none";
 }
 
-function showSaldo() {
-  $('#menuPrincipal').show();
-  $('#menu').hide();
-  $('#saldo').show();
-  $('#calcular').hide();
-  $('#perfil').hide();
-  $('#preguntas').hide();
+function showSaldo(){
+  paginaRegistro.style.display = "none";
+  menuPrincipal.style.display = "block";
+  menu.style.display = "none";
+  saldo.style.display = "block";
+  calcular.style.display = "none";
+  perfil.style.display = "none";
+  preguntas.style.display = "none";
 }
 
-function showCalcular() {
-  $('#menuPrincipal').show();
-  $('#menu').hide();
-  $('#saldo').hide();
-  $('#calcular').show();
-  $('#perfil').hide();
-  $('#preguntas').hide();
+function showCalcular(){
+  paginaRegistro.style.display = "none";
+  menuPrincipal.style.display = "block";
+  menu.style.display = "none";
+  saldo.style.display = "none";
+  calcular.style.display = "block";
+  perfil.style.display = "none";
+  preguntas.style.display = "none";
 }
 
-function showPerfil() {
-  $('#menuPrincipal').show();
-  $('#menu').hide();
-  $('#saldo').hide();
-  $('#calcular').hide();
-  $('#perfil').show();
-  $('#preguntas').hide();
+function showPerfil(){
+  paginaRegistro.style.display = "none";
+  menuPrincipal.style.display = "block";
+  menu.style.display = "none";
+  saldo.style.display = "none";
+  calcular.style.display = "none";
+  perfil.style.display = "block";
+  preguntas.style.display = "none";
 }
 
-function showPreguntas() {
-  $('#menuPrincipal').show();
-  $('#menu').hide();
-  $('#saldo').hide();
-  $('#calcular').hide();
-  $('#perfil').hide();
-  $('#preguntas').show();
+function showPregunta(){
+  paginaRegistro.style.display = "none";
+  menuPrincipal.style.display = "block";
+  menu.style.display = "none";
+  saldo.style.display = "none";
+  calcular.style.display = "none";
+  perfil.style.display = "none";
+  pregunta.style.display = "block";
 }
 
 
