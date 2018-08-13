@@ -74,11 +74,8 @@ function saldo(){
 
 const renderInfo = data => {
   if(data.response === true){
-  const contenedorElemento = document.createElement('p');
-  let textNewComment = document.createTextNode(inputTexto) || document.createTextNode(selectorContenedor);
-  contenedorElemento.appendChild(textNewComment);
-  contenedorSaldo.appendChild(contenedorElemento);
-  contenedorElemento.innerHTML = data.saldoTarjeta;
+    let saldo = data.saldoTarjeta;
+    contenedorSaldo.innerHTML = saldo;
   }else{
     return alert("Número de tarjeta inválido");
   }
