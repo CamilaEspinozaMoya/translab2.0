@@ -2,23 +2,23 @@ window.onload = () =>{
   firebase.auth().onAuthStateChanged((user)=>{
     if(user){
     //Si estamos logueados
-    paginaRegistro.style.display = "none";
-    menuPrincipal.style.display = "block";
-    menu.style.display = "block";
-    saldo.style.display = "none";
-    calcular.style.display = "none";
-    perfil.style.display = "none";
-    preguntas.style.display = "none";
+    $('#paginaRegistro').hide();
+    $('#menuPrincipal').show();
+    $('#menu').show();
+    $('#saldo').hide();
+    $('#calcular').hide();
+    $('#perfil').hide();
+    $('#pregunta').hide();
     console.log("User > "+JSON.stringify(user));
     }else{
     //No estamos logueados
-    paginaRegistro.style.display = "block";
-    menuPrincipal.style.display = "none";
-    menu.style.display = "none";
-    saldo.style.display = "none";
-    calcular.style.display = "none";
-    perfil.style.display = "none";
-    preguntas.style.display = "none";
+    $('#paginaRegistro').show();
+    $('#menuPrincipal').hide();
+    $('#menu').hide();
+    $('#saldo').hide();
+    $('#calcular').hide();
+    $('#perfil').hide();
+    $('#pregunta').hide();
     }
   });
 };

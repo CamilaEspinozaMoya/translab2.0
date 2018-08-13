@@ -62,6 +62,7 @@ function saldo(){
   if (inputTexto.length > 0 || selectorContenedor.length > 0) {
     let ntarjeta = inputTexto.value || selectorContenedor.value;
     inputTexto.value = '';
+    selectorContenedor.value = '';
 
     fetch(`https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${ntarjeta}`)
     .then(response => response.json())
@@ -74,10 +75,12 @@ function saldo(){
 const renderInfo = data => {
   if(data.response === true){
   const contenedorElemento = document.createElement('p');
+  let textNewComment = document.createTextNode(inputTexto) || document.createTextNode(selectorContenedor);
+  contenedorElemento.appendChild(textNewComment);
   contenedorSaldo.appendChild(contenedorElemento);
   contenedorElemento.innerHTML = data.saldoTarjeta;
   }else{
-    return "busca nuevamente"
+    return alert("Número de tarjeta inválido");
   }
 
 }
