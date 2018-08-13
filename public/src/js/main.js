@@ -58,6 +58,7 @@ function select(){
 function saldo(){
   const inputTexto = document.getElementById('hola');
   const selectorContenedor = document.getElementById('inputGroupSelect01');
+  let contenedorSaldo = document.getElementById('contenedorSaldo');
 
   if (inputTexto.length > 0 || selectorContenedor.length > 0) {
     let ntarjeta = inputTexto.value || selectorContenedor.value;
@@ -71,14 +72,11 @@ function saldo(){
     })
   }
 
-
 const renderInfo = data => {
-
   if(data.response === true){
-  containerTitle.innerHTML = data.Title;
-  containerYear.innerHTML = data.Year;
-  containerRuntime.innerHTML = data.Runtime;
-  containerImage.innerHTML = `<img src="${data.Poster}">`;
+  const contenedorElemento = document.createElement('p');
+  contenedorSaldo.appendChild(contenedorElemento);
+  contenedorElemento.innerHTML = data.saldoTarjeta;
   }else{
     return "busca nuevamente"
   }
