@@ -84,3 +84,7 @@ const renderInfo = data => {
 }
 }
 
+function calcular(){
+  
+}
+
