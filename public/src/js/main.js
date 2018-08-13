@@ -63,6 +63,15 @@ function select(){
     }
 };
 
+function select2(){
+  const inputTexto = document.getElementById('hola');
+    if (selectorContenedor.value.length > 0) {
+      inputTexto.disabled = true;
+    } else {
+      inputTexto.disabled = false;
+    }
+};
+
 // ver saldo
 function saldo(){
   const inputTexto = document.getElementById('hola');
