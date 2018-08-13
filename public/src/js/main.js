@@ -48,7 +48,6 @@ function select(){
   const inputTexto = document.getElementById('hola');
     if (selectorContenedor.value.length > 0) {
       inputTexto.disabled = true;
-      console.log(hola);
     } else {
       inputTexto.disabled = false;
     }
@@ -64,7 +63,7 @@ function saldo(){
     let ntarjeta = inputTexto.value || selectorContenedor.value;
     inputTexto.value = '';
 
-    fetch(`http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${ntarjeta}`)
+    fetch(`https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${ntarjeta}`)
     .then(response => response.json())
     .then(data => {
       console.log(data);
