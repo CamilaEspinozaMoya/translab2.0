@@ -5,7 +5,7 @@ function showHome(){
   saldo.style.display = "none";
   calcular.style.display = "none";
   perfil.style.display = "none";
-  preguntas.style.display = "none";
+  pregunta.style.display = "none";
 }
 
 function showSaldo(){
@@ -15,7 +15,7 @@ function showSaldo(){
   saldo.style.display = "block";
   calcular.style.display = "none";
   perfil.style.display = "none";
-  preguntas.style.display = "none";
+  pregunta.style.display = "none";
 }
 
 function showCalcular(){
@@ -25,7 +25,7 @@ function showCalcular(){
   saldo.style.display = "none";
   calcular.style.display = "block";
   perfil.style.display = "none";
-  preguntas.style.display = "none";
+  pregunta.style.display = "none";
 }
 
 function showPerfil(){
@@ -35,7 +35,7 @@ function showPerfil(){
   saldo.style.display = "none";
   calcular.style.display = "none";
   perfil.style.display = "block";
-  preguntas.style.display = "none";
+  pregunta.style.display = "none";
 }
 
 function showPregunta(){

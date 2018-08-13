@@ -1,3 +1,4 @@
+// Firebase tarjeta
 var db = firebase.firestore();
 
 function agregarTarjeta(){
@@ -15,7 +16,7 @@ function agregarTarjeta(){
     });
 }
 
-// leer documentos
+// Mostrar numero tarjeta en pantalla
 let numeroTarjetaContenedor = document.getElementById('contenedorNumero');
 db.collection('tarjeta').onSnapshot((querySnapshot) => {
   numeroTarjetaContenedor.innerHTML = '';
@@ -30,3 +31,58 @@ db.collection('tarjeta').onSnapshot((querySnapshot) => {
       `
   });
 });
+
+// Mostrar numero tarjeta en select
+const selectorContenedor = document.getElementById('inputGroupSelect01');
+db.collection('tarjeta').onSnapshot((querySnapshot) => {
+  querySnapshot.forEach((doc) => {
+    console.log(`${doc.id} => ${doc.data().card}`);
+    selectorContenedor.innerHTML += `
+    <option value="${doc.data().card}">${doc.data().card}</option>
+      `
+  });
+});
+
+// Deshabilitar input
+function select(){
+  const inputTexto = document.getElementById('hola');
+    if (selectorContenedor.value.length > 0) {
+      inputTexto.disabled = true;
+      console.log(hola);
+    } else {
+      inputTexto.disabled = false;
+    }
+};
+
+// ver saldo
+function saldo(){
+  const inputTexto = document.getElementById('hola');
+  const selectorContenedor = document.getElementById('inputGroupSelect01');
+
+  if (inputTexto.length > 0 || selectorContenedor.length > 0) {
+    let ntarjeta = inputTexto.value || selectorContenedor.value;
+    inputTexto.value = '';
+
+    fetch(`http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${ntarjeta}`)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      renderInfo(data);
+    })
+  }
+
+
+const renderInfo = data => {
+
+  if(data.response === true){
+  containerTitle.innerHTML = data.Title;
+  containerYear.innerHTML = data.Year;
+  containerRuntime.innerHTML = data.Runtime;
+  containerImage.innerHTML = `<img src="${data.Poster}">`;
+  }else{
+    return "busca nuevamente"
+  }
+
+}
+}
+
