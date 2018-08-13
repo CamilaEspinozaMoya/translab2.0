@@ -43,6 +43,16 @@ db.collection('tarjeta').onSnapshot((querySnapshot) => {
   });
 });
 
+const selectorContenedor2 = document.getElementById('inputGroupSelect02');
+db.collection('tarjeta').onSnapshot((querySnapshot) => {
+  querySnapshot.forEach((doc) => {
+    console.log(`${doc.id} => ${doc.data().card}`);
+    selectorContenedor2.innerHTML += `
+    <option value="${doc.data().card}">${doc.data().card}</option>
+      `
+  });
+});
+
 // Deshabilitar input
 function select(){
   const inputTexto = document.getElementById('hola');
@@ -85,6 +95,6 @@ const renderInfo = data => {
 }
 
 function calcular(){
-  
+
 }
 
