@@ -69,17 +69,27 @@ function saldo(){
     .then(data => {
       console.log(data);
       renderInfo(data);
+    
+      if(data.response === true){
+        let saldo = data.saldoTarjeta;
+        contenedorSaldo.innerHTML = saldo;
+        console.log(hola);
+      }else{
+        return alert("Número de tarjeta inválido");
+      }
     })
   }
 
+/*
 const renderInfo = data => {
   if(data.response === true){
     let saldo = data.saldoTarjeta;
     contenedorSaldo.innerHTML = saldo;
+    console.log(hola);
   }else{
     return alert("Número de tarjeta inválido");
   }
-
 }
+*/
 }
 
