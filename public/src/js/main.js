@@ -99,7 +99,7 @@ function saldo(){
 
 function calcular(){
   const inputTexto2 = document.getElementById('hola2');
-  const selectorHorario = document.getElementById('inputGroupSelect03');
+  const selectorHorario = document.getElementById('inputGroupSelect03').value;
   const selectorContenedor2 = document.getElementById('inputGroupSelect02');
   const contenedorPasaje = document.getElementById('costoPasaje');
   const contenedorSaldoFinal = document.getElementById('saldoFinal');
@@ -109,12 +109,16 @@ function calcular(){
     inputTexto2.value = '';
     selectorContenedor2.value = '';
 
-    fetch(`https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${ntarjeta}`)
+
+    fetch(`https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${ntarjeta2}`)
     .then(response => response.json())
     .then(data => {
-    
-      let saldo = data.saldoTarjeta;
-      contenedorSaldo.innerHTML = saldo;
+      const expression = /(\d+)/g;
+      const dataBip = data.saldoTarjeta.match(expression);
+      const dataFinalBip = parseInt(dataBip[0] + dataBip[1]);
+      let calculo = dataFinalBip - selectorHorario;
+      contenedorPasaje.innerHTML = '$' + selectorHorario;
+      contenedorSaldoFinal.innerHTML = '$' + calculo;
       
     })
     .catch(()=>{
