@@ -64,11 +64,11 @@ function select(){
 };
 
 function select2(){
-  const inputTexto = document.getElementById('hola2');
-    if (selectorContenedor.value.length > 0) {
-      inputTexto.disabled = true;
+  const inputTexto2 = document.getElementById('hola2');
+    if (selectorContenedor2.value.length > 0) {
+      inputTexto2.disabled = true;
     } else {
-      inputTexto.disabled = false;
+      inputTexto2.disabled = false;
     }
 };
 
@@ -76,7 +76,7 @@ function select2(){
 function saldo(){
   const inputTexto = document.getElementById('hola');
   const selectorContenedor = document.getElementById('inputGroupSelect01');
-  let contenedorSaldo = document.getElementById('contenedorSaldo');
+  const contenedorSaldo = document.getElementById('contenedorSaldo');
 
   if (inputTexto.length > 0 || selectorContenedor.length > 0) {
     let ntarjeta = inputTexto.value || selectorContenedor.value;
@@ -86,24 +86,41 @@ function saldo(){
     fetch(`https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${ntarjeta}`)
     .then(response => response.json())
     .then(data => {
-      console.log(data);
-      renderInfo(data);
     
-        let saldo = data.saldoTarjeta;
-        contenedorSaldo.innerHTML = saldo;
+      let saldo = data.saldoTarjeta;
+      contenedorSaldo.innerHTML = saldo;
+      
     })
+    .catch(()=>{
+      console.error("No fue posible completar la solicitud.");
+    });
   }
-
-const renderInfo = data => {
-  if(data.response === true){
-    let saldo = data.saldoTarjeta;
-    contenedorSaldo.innerHTML = saldo;
-    console.log(hola);
-  }
-}
 }
 
 function calcular(){
+  const inputTexto2 = document.getElementById('hola2');
+  const selectorHorario = document.getElementById('inputGroupSelect03');
+  const selectorContenedor2 = document.getElementById('inputGroupSelect02');
+  const contenedorPasaje = document.getElementById('costoPasaje');
+  const contenedorSaldoFinal = document.getElementById('saldoFinal');
+
+  if (inputTexto2.length > 0 || selectorContenedor2.length > 0) {
+    let ntarjeta2 = inputTexto2.value || selectorContenedor2.value;
+    inputTexto2.value = '';
+    selectorContenedor2.value = '';
+
+    fetch(`https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${ntarjeta}`)
+    .then(response => response.json())
+    .then(data => {
+    
+      let saldo = data.saldoTarjeta;
+      contenedorSaldo.innerHTML = saldo;
+      
+    })
+    .catch(()=>{
+      console.error("No fue posible completar la solicitud.");
+    });
+  }
 
 }
 
