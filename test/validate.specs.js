@@ -26,13 +26,9 @@ describe('validar emails', ()=>{//Describe que habra dentro
 describe('validar contraseña', ()=>{//Describe que habra dentro 
   describe('Deberia verificar los de caracteres de la contraseña', ()=>{
     it('Debe tener maximo 8 caracteres', ()=>{
-      assert.equal(validatePassword("12345678"), true);
-      assert.equal(validatePassword("12345"), true);
       assert.equal(validatePassword("123453456789"), false);
     });
     it('Debe tener al menos un caracter', ()=>{
-      assert.equal(validatePassword("12345678"), true);
-      assert.equal(validatePassword("12345"), true);
       assert.equal(validatePassword(""), false);
     });
     it('Debe tener solo numeros', ()=>{
